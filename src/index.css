@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background bg-center bg-fixed text-white;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+p {
+  @apply break-all text-sm;
+}
+
+button.primary {
+  @apply relative rounded-lg text-center font-medium text-black bg-primary disabled:bg-primary-disable overflow-hidden z-0;
+  @apply before:absolute before:transition-transform before:duration-300 before:scale-0 disabled:before:hidden hover:before:scale-100 before:size-48 before:top-[--y] before:left-[--x] before:-z-10 before:-translate-x-1/2 before:-translate-y-1/2
+}
+
+button.secondary {
+  @apply relative rounded-lg text-center font-medium text-white bg-black disabled:bg-primary-disable overflow-hidden z-0 border border-[#82828E] duration-300 hover:text-[#82828E];
+}
+
+button.primary:before {
+  background: radial-gradient(50% 50% at 50% 50%, #FFAD4D 0%, #FCD15A 100%);
+}
+
+.card {
+  @apply p-10 grid border border-transparent gap-8 max-w-96 text-white rounded-3xl;
+  background: 
+    center fixed url(/background-blur.webp) padding-box,
+    linear-gradient(180deg, #82828E 0%, #303038 100%) border-box;
+}
+
+.transparent-blur {
+  @apply m-px;
+  background: 
+    center fixed url(/background-blur.webp) padding-box;
+}
+
+.gradient {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12 w-full h-full origin-center;
+  background: 
+    linear-gradient(70deg, #FCD15A 4.6%, #CE2C68 18.29%, #3F0D3F 32.86%, rgba(29, 29, 36, 0) 46.99%) border-box,
+    linear-gradient(180deg, #1D1D24 0%, #1D1D24 100%);
+  animation: gradient_rotate -.64s linear 4s infinite;
+}
+
+@keyframes gradient_rotate {
+  from {
+    transform: translate(-50%, -50%) scale(1.1) rotate(0deg) 
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1) rotate(360deg) 
+  }
+}
+
+input {
+  @apply duration-300 py-3 px-4 text-[#A3A3A8] hover:text-white focus:text-white bg-black rounded-lg border border-black focus:border-[#82828E];
+}
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

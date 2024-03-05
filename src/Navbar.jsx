@@ -84,7 +84,7 @@ export default function Navbar() {
         <div className='mx-auto py-4 h-full flex justify-between items-center max-w-screen-xl'>
           <a href="/" className='flex items-center gap-3 font-bold text-white text-base'>
             <img src={iExeclogo} className="logo" alt="iExec logo" />
-            <p>Secret Email</p>
+            <p className='font-mono'>Secret Email</p>
           </a>
           <div className='flex items-center gap-3'>
             <Button type="primary" size="small" pending={pending} onClick={connectWallet}>

@@ -1,5 +1,3 @@
-import './App.css'
-
 export default function EmailProtectedCard({ name, onClick }) {
   return (
     <button 

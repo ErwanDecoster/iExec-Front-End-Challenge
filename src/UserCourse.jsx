@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Button from './Button.jsx'
 import EmailProtectedCard from './EmailProtectedCard.jsx'
-import './App.css'
 import { IExecDataProtector } from "@iexec/dataprotector";
 import { useCookies } from 'react-cookie';
 

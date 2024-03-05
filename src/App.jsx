@@ -1,4 +1,3 @@
-import './App.css'
 import UserCourse from './UserCourse.jsx'
 import { useEffect, useState } from 'react';
 

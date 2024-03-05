@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Mulish;
+  src: url(/src/assets/Mulish-VariableFont_wght.ttf);
+}
+
 body {
   @apply bg-background bg-center bg-fixed text-white;
+  font-family: Mulish;
 }
 
 h1 {
